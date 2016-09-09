@@ -1,0 +1,8 @@
+>> diary on
+>> buildseq(4)
+x =  1
+ans =
+
+   1.0000   1.5000   1.7500   1.8750
+
+>> diary off

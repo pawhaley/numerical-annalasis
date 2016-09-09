@@ -1,0 +1,10 @@
+>> diary on
+>> nextprime(5)
+ans =  5
+>> nextprime(6)
+ans =  7
+>> nextprime(-1)
+ans =  2
+>> nextprime(100)
+ans =  101
+>> diary off
