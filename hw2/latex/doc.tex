@@ -75,7 +75,7 @@
 % The main document start here.
 
 % The following commands set up the material that appears in the header.
-\doclabel{Math 310: Demo Homework}
+\doclabel{Math 310: Homework 2}
 \docauthor{Parker Whaley}
 \docdate{August 22, 2016}
 
@@ -104,7 +104,7 @@ works by computing nextprime(5), nextprime(6), nextprime(-1) and nextprime(100).
 \begin{exercise}{3}
 Define a sequence of numbers by $x_1 = 1$ and $x_{k+1} =\frac{1}{2}x_k + 1$. Write a Matlab function
 buildseq(N) that returns an array with the first N elements of the sequence in it. For
-example, buildseq(2) should return [1, 0.75]. Test that your function works by computing
+example, buildseq(2) should return [1, 1.5]. Test that your function works by computing
 the first four sequence elements by hand, and then verifying that your function computes
 them correctly. You may wish to take advantage of the Matlab command zeros.
 \end{exercise}
@@ -125,17 +125,23 @@ And the result of the script
 \lstinputlisting{../octave/q4a.txt}
 \includegraphics[scale=.5]{../octave/q4fig.jpg}
 
-The interval $I$ after $N$ iterations is $I=2^{-N}$.  Thus if we wanted a interval of $I=10^{-12}$ we would set these as a inequality $10^{-12}\ge 2^{-N}$.  Since $\log$ is monotonic increasing we can take $\log_2$ of both sides $-12\log_2 10\ge -N$.  so we finaly get $12\log_2 10\ge N$ and the smallest natural with this property is $N=40$.
+The interval $I$ after $N$ iterations is $I=2^{-N}$.  Thus if we wanted a interval of $I=10^{-12}$ we would set these as a inequality $10^{-12}\ge 2^{-N}$.  Since $\log$ is monotonic increasing we can take $\log_2$ of both sides $-12\log_2 10\ge -N$.  so we final get $12\log_2 10\ge N$ and the smallest natural with this property is $N=40$.
 \newpage
 \begin{exercise}{Chapter 4: 2(b)}
 \end{exercise}
 My newton method
 \lstinputlisting{../octave/newton.m}
 
-FINISH LATER
+FINISH LATER NOT DUE TILL NEXT WEEK
 \newpage
 \begin{exercise}{Chapter 4: 18}
 \end{exercise}
-
-
+let's begin by calculating the derivatives of $f(x)=e^{1-x^2}$.
+$$f(x)=e^{1-x^2}$$
+$$f'(x)=-2xe^{1-x^2}$$
+$$f''(x)=(4x^2-2)e^{1-x^2}$$
+$$f'''(x)=(12x-8x^3)e^{1-x^2}$$
+Now that we have these it is trivial to crate a Taylor expansion.
+\lstinputlisting{../octave/q5.m}
+\includegraphics[scale=.9]{../octave/q5fig.jpg}
 \end{document}
