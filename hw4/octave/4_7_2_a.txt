@@ -1,0 +1,42 @@
+>> secdrvr
+exit with error test
+exited with the error <more than Nmax iterations>
+
+
+exit with xtol
+   x history   y history     error in y   error in x
+   4.0000e+00   4.9598e+01   4.9598e+01          Inf
+   5.0000e+00  -5.0000e+00   5.0000e+00   1.0000e+00
+   4.9084e+00   7.4020e+00   7.4020e+00   9.1578e-02
+   4.9631e+00   2.8089e-01   2.8089e-01   5.4658e-02
+   4.9652e+00  -1.6750e-02   1.6750e-02   2.1560e-03
+
+
+normal run
+   x history   y history     error in y   error in x
+   4.0000e+00   4.9598e+01   4.9598e+01          Inf
+   5.0000e+00  -5.0000e+00   5.0000e+00   1.0000e+00
+   4.9084e+00   7.4020e+00   7.4020e+00   9.1578e-02
+   4.9631e+00   2.8089e-01   2.8089e-01   5.4658e-02
+   4.9652e+00  -1.6750e-02   1.6750e-02   2.1560e-03
+   4.9651e+00   3.4731e-05   3.4731e-05   1.2133e-04
+   4.9651e+00   4.2810e-09   4.2810e-09   2.5106e-07
+
+
+actual and predicted errors in y
+     actual        predicted
+     y error       y error
+    4.9598e+01           NaN
+    5.0000e+00           NaN
+    7.4020e+00    7.8420e+00
+    2.8089e-01    7.2703e-01
+    1.6750e-02    1.5500e-02
+    3.4731e-05    3.0635e-05
+    4.2810e-09    1.2909e-09
+           NaN    1.0751e-16
+           NaN    3.7732e-28
+           NaN    1.1029e-46
+           NaN    1.1313e-76
+           NaN   3.3920e-125
+           NaN   1.0433e-203
+>> diary off
