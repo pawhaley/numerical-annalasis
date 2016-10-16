@@ -1,0 +1,13 @@
+>> x=matrixSolve(A,b)
+x =
+
+   4.4409
+   2.0000
+
+>> A\b
+ans =
+
+   1
+   2
+
+>> diary off
