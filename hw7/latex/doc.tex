@@ -266,5 +266,46 @@ and lsolve from the course web page to solve $Ax = b$ where $A$ is the matrix fr
 problem 10 of the worksheet and $b = \begin{bmatrix}-1\\ 6\\ -8\end{bmatrix}$.
 \end{exercise}
 \lstinputlisting{../octave/mylu.m}
+This is my demonstration of L U factorization:
+\lstinputlisting{../octave/d3.txt}
+Here are my usolve, isolve, and general solve without partial pivoting:
+\lstinputlisting{../octave/usolve.m}
+\lstinputlisting{../octave/lsolve.m}
+\lstinputlisting{../octave/noPPsolve.m}
+So solving the desired problem:
+\lstinputlisting{../octave/d4.txt}
 
+\begin{exercise}
+
+To compute the inverse of an $n \times n$ matrix $A$ you need to find n vectors $v_i$ such that
+$Av_i = e_i$
+, where $e_i$
+is the vector of all zeros, except that $e_i$ has a one in its $i$
+th
+entry. E.g., if $n = 4$ then $e_3 = [ 0, 0,1, 0]^T$. Once the vectors $v_i$ are known, then
+$A^{-1} = [v_1 | v_2 | \cdots |v_n]$. 
+How many floating point operations are required to perform an LU decomposition of A
+and then solve for the n vectors $v_i$?
+If one wants to compute the solution of $Ax = b$ by computing $A^{-1}$ and then mutiplying to
+obtain $x = A^{-1}b$, how many floating point operations does this take? Compare this number
+with the number of floating point operations to solve $Ax = b$ by LU decomposition
+without computing $A^{-1}$
+.
+\end{exercise}
+Doing a LU decomposition, lets calculate the cost by examining the solution, converting for loops into summations, we see imeadiately that there are $$\sum^{n-1}_1\sum^n_{i+1}1=\sum^{n-1}_1n-i=(n-1)n-\frac{(n-1)n}{2}=1/2n^2-1/2n$$ devisions.  There will be the same number of subtractions as multiplications so we get  $$\sum^{n-1}_1\sum^n_{i+1}\sum^n_{i+1}1=\sum^{n-1}_1\sum^n_{i+1}n-i=\sum^{n-1}_1 (n-i)(n-i)=\sum^{n-1}_1 n^2-2ni+i^2=n^2(n-1)-2n\frac{(n-1)n}{2}+\frac{(n-1)(n)(2n-1)}{6}$$
+multiplications or devisions.  Well these numbers are nasty so lets work with order of magnitude.  LU factorization costs $\frac{2n^3}{3}+O(n^2)$ FLOPs.\\
+Solving a unit lower triangular matrix would require a multiply and a add for each entry below the diagonal, this would be $n^2/2-n$ adds and multiplys.  The solve on the upper triangular matrix works out the same but there are n additional devisions, since the diagonal is not zeroed.  so a compleate LU solve requires $4*(n^2/2-n)+n=2n^2+O(n)$ FLOPs.\\
+If we want to find the inverse of a matrix by doing LU factoring and n LU solves it will take $\frac{2n^3}{3}+O(n^2)+n(2n^2+O(n))=2\frac{2n^3}{3}+O(n^2)$, If we then multiply to solve we take a additional $2n^2+O(n)$ operations for a total of $2\frac{2n^3}{3}+O(n^2)$ FLOPs.  This is much worse than a simple LU factor and solve method since a LU factor and solve method only takes $\frac{2n^3}{3}+O(n^2)+(2n^2+O(n))=\frac{2n^3}{3}+O(n^2)$ FLOPs.
+
+\begin{exercise}
+worksheet problem 16
+\end{exercise}
+\lstinputlisting{../octave/d5.txt}
+\begin{exercise}
+worksheet problem 17
+\end{exercise}
+This is a working solution
+\lstinputlisting{../octave/myplu.m}
+Here is a demonstration that it works:
+\lstinputlisting{../octave/d6.txt}
 \end{document}
