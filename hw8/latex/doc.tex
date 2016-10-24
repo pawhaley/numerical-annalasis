@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[bw,framed,numbered]{mcode}
+\usepackage{graphicx}
+
+% Comment the following line to use TeX's default font of Computer Modern.
+\usepackage{times,txfonts}
+
+\newtheoremstyle{homework}% name of the style to be used
+  {18pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {:}% punctuation between head and body
+  {2ex}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+\theoremstyle{homework} 
+
+% Set up an Exercise environment and a Solution label.
+\newtheorem*{exercisecore}{Exercise \@currentlabel}
+\newenvironment{exercise}[1]
+{\def\@currentlabel{#1}\exercisecore}
+{\endexercisecore}
+
+\newcommand{\localhead}[1]{\par\smallskip\noindent\textbf{#1}\nobreak\\}%
+\newcommand\solution{\localhead{Solution:}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Stuff for getting the name/document date/title across the header
+\makeatletter
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[C]{\ifx\@docdate\@empty\else\@docdate\fi}
+\fancyhead[R]{\ifx\@docauthor\@empty\else\@docauthor\fi}
+\headheight 15pt
+
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\doclabel{Use {\tt\textbackslash doclabel\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\docauthor#1{\gdef\@docauthor{#1}}
+\docauthor{Use {\tt\textbackslash docauthor\{MY NAME\}}.}
+\makeatother
+
+% Shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\Reals}{\ensuremath{\mathbb R}}
+\newcommand{\Nats}{\ensuremath{\mathbb N}}
+\newcommand{\Ints}{\ensuremath{\mathbb Z}}
+\newcommand{\Rats}{\ensuremath{\mathbb Q}}
+\newcommand{\Cplx}{\ensuremath{\mathbb C}}
+%% Some equivalents that some people may prefer.
+\let\RR\Reals
+\let\NN\Nats
+\let\II\Ints
+\let\CC\Cplx
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% The main document start here.
+
+% The following commands set up the material that appears in the header.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% The main document start here.
+
+% The following commands set up the material that appears in the header.
+\doclabel{Math 310: Homework 6}
+\docauthor{Parker Whaley}
+\docdate{September 9, 2016}
+
+\newcommand{\vv}{\mathbf{v}}
+\begin{document}
+\begin{exercise}
+
+7.8
+\end{exercise}
+One norm $=$ sum of abselute terms $=15$.  
+Two norm $=$ root of the sum of squares $=\sqrt{77}$.  
+Infinity norm $=$ largest abselute term $=6$.
+\begin{exercise}
+
+7.9
+\end{exercise}
+one norm $=$ largest of the sum of abselute terms in a columb $=14$.
+infinity norm $=$ largest of the sum of abselute terms in a row $=15$.\\
+Using octave $A^{-1}=\begin{bmatrix}
+-4&3\\3.5&-2.5
+\end{bmatrix}$.  Wich has a one norm of $7.5$ and a infinity norm of $7$.  So its one norm condition number is $105$ and its infinity condition number is $105$.
+
+\begin{exercise}
+
+7.10
+\end{exercise}
+Let $v$ be a $n$-vector.  WLoG let $v_1$ be the maximum abselute entry in $v$, and thus $|v_1|=||v||_\infty$.
+\begin{enumerate}[(a)]
+\item
+Note that for all $i$, $v_i^2\leq v_1^2$.  Thus $v_1^2\leq v_1^2 + \sum_{i=2}^n v_i^2\leq n*v_1^2$ or $\sqrt{v_1^2}\leq \sqrt{v_1^2 + \sum_{i=2}^n v_i^2}\leq \sqrt{n*v_1^2}$ or $||v||_\infty\leq ||v||_2 \leq \sqrt{n}||v||_\infty$.
+\item
+Note that $(|a|+|b|)^2=a^2+b^2+2|ab|\geq a^2+b^2$  by trivial induction we can conclude $\sum |v_i|\geq \sqrt{\sum v_i^2}$ or $||v||_1\geq ||v||_2$.
+\item
+Note that $v_i\leq v_1$.  Thus $\sum v_i\leq nv_1$ or $||v||_1\leq n||v||_\infty$.
+\end{enumerate}
+\begin{enumerate}[(a)]
+\item
+There will never be equality for any non zero vector $v$ living in $n>1$ space.  We can see this by simply considering the proposed equality, $||v||_\infty= ||v||_2 = \sqrt{n}||v||_\infty$, or in other words $||v||_\infty= \sqrt{n}||v||_\infty$ so $||v||_\infty=0$, witch only occurs for $v=\vec{0}$.
+\item
+The vector $v=\begin{pmatrix}
+1\\0
+\end{pmatrix}$ has the property that $||v||_1= ||v||_2= 1$.
+\item
+The vector $v=\begin{pmatrix}
+1\\1
+\end{pmatrix}$ has the property that $||v||_1= 2||v||_\infty=2$.
+\end{enumerate}
+\begin{exercise}
+
+4
+\end{exercise}
+\lstinputlisting{../octave/d1.txt}
+\lstinputlisting{../octave/PPsolve.m}
+\lstinputlisting{../octave/myplu.m}
+\lstinputlisting{../octave/lsolve.m}
+\lstinputlisting{../octave/usolve.m}
+\begin{exercise}
+
+5
+\end{exercise}
+TBA???
+\end{document}
