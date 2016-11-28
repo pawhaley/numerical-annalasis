@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.6)  15 NOV 2016 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.4)  28 NOV 2016 01:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -560,19 +560,18 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 88.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 92--109
-
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 163.
-
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) (../octave/d1.txt
+)
+(../octave/traprule.m
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 6.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)) (../octave/simpson.m) (../octave/d1.txt
 LaTeX Font Info:    Try loading font information for OML+pcr on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlpcr.fd
@@ -580,43 +579,47 @@ File: omlpcr.fd
 )
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 2.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-) [2])
-(../octave/errfind.m
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
-) [3]
-Overfull \hbox (6.9683pt too wide) detected at line 204
-\OML/txmi/m/it/12 f\OT1/txr/m/n/12 (0)[] + \OML/txmi/m/it/12 f\OT1/txr/m/n/12 (
-1\OML/txmi/m/it/12 =\OT1/txr/m/n/12 3)[] + \OML/txmi/m/it/12 f\OT1/txr/m/n/12 (
-2\OML/txmi/m/it/12 =\OT1/txr/m/n/12 3)[] + \OML/txmi/m/it/12 f\OT1/txr/m/n/12 (
-1)[] =
+]) (../octave/cheb.m [2]) (../octave/d2.txt)
+Overfull \hbox (20.08382pt too wide) in paragraph at lines 129--130
+[]\OT1/txr/bx/n/12 Exercise 4: []\OT1/txr/m/n/12 Re-call that 5 point Gauss-Leg
+endre in-te-gra-tion uses sam-ple points$[\OMS/txsy/m/n/12 ^^@\OML/txmi/m/it/12
+ ^^L; \OMS/txsy/m/n/12 ^^@\OML/txmi/m/it/12 ; \OT1/txr/m/n/12 0\OML/txmi/m/it/
+12 ; ; ^^L\OT1/txr/m/n/12 ]$
  []
 
-[4] [5] (./doc.aux) ) 
+(../octave/glquad.m [3]
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 16.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+) (../octave/glerr.m) (../octave/d3.txt) (../octave/secderiv.m) [4] (../octave/
+d4.txt) [5]
+(./doc.aux) ) 
 Here is how much of TeX's memory you used:
- 5924 strings out of 494910
- 79551 string characters out of 6179837
- 163692 words of memory out of 5000000
- 9080 multiletter control sequences out of 15000+600000
- 35346 words of font info for 96 fonts, out of 8000000 for 9000
+ 6021 strings out of 494910
+ 80715 string characters out of 6179837
+ 173692 words of memory out of 5000000
+ 9152 multiletter control sequences out of 15000+600000
+ 33970 words of font info for 94 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,12n,43p,474b,1612s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on doc.pdf (5 pages, 85350 bytes).
+ 38i,12n,43p,613b,1583s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfo
+nts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/times/utmri8a.pfb>
+Output written on doc.pdf (5 pages, 92563 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream

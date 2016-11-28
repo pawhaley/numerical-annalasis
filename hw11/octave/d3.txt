@@ -1,0 +1,7 @@
+>> glerr
+err =    3.5271e-04
+err =    4.7596e-06
+err =    7.1806e-08
+err =    2.9128e-10
+>> diary off
+>> diary off

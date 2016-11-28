@@ -1,0 +1,5 @@
+>> cheb
+err =    1.5436e-04
+err =    1.4867e-07
+err =    1.9205e-10
+>> diary off
