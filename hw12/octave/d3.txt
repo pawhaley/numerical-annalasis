@@ -1,0 +1,11 @@
+>> orbit([4,0,0,.5],.0025,50,@(pos,dpos,dt,t) euler(pos,dpos,dt,t))
+>> orbit([4,0,0,.5],.25,50,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> orbit([4,0,0,.5],.25,50,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> diary off
+>> orbit([4,0,0,.5],.25,50,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> orbit([4,0,0,.6],.5,150,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> orbit([4,0,0,.8],.5,200,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> orbit([4,0,0,.4],.25,35,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> orbit([4,0,0,.2],.25,30,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> orbit([4,0,0,.2],.05,30,@(pos,dpos,dt,t) RK4(pos,dpos,dt,t))
+>> diary off

@@ -1,0 +1,21 @@
+>> dy=@(y,t) (t+1)*e^(-y)
+dy =
+
+@(y, t) (t + 1) * e ^ (-y)
+
+>> #euler
+>> h=.1
+h =  0.10000
+>> y1=dy(0,0)*h
+y1 =  0.10000
+>> #midpoint
+>> temp=dy(0,0)*h/2
+temp =  0.050000
+>> y1=dy(temp,h/2)*h
+y1 =  0.099879
+>> #now for Heun's method
+>> temp=dy(0,0)*h
+temp =  0.10000
+>> y1=(dy(0,0)+dy(temp,h))/2*h
+y1 =  0.099766
+>> diary off
