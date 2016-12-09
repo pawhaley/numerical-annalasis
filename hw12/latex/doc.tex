@@ -85,7 +85,7 @@
 1
 Problem 9.6
 \end{exercise}
-Note that the taylor estimation is $f(x+c)= f(x) + f'(x)c+ f''(x)c^2/2+f'''(x)c^3/6+O(c^4)$.  We are asked to find the values of the constants in the equation $f''(x)\approx Af(x)+Bf(x+h)+Cf(x+2h)$ that give the maximal acuracy in terms of the magnitude of $h$.  Note that using taylor's approximation we get $f''(x)\approx Af(x)+B[f(x) + f'(x)h+ f''(x)h^2/2+f'''(x)h^3/6]+C[f(x) + 2f'(x)h+ 2f''(x)h^2+4f'''(x)h^3/3]+O(h^4)$.  We then get the equations $A+B+C=0$ to link values, $Bh+2Ch=0$, $Bh^2/2+2Ch^2=1$.  Solving we get $-B=2C$, $Bh^2/2-Bh^2=1$, $Bh^2(1/2-1)=-Bh^2/2=1$, $B=-2/h^2$, $C=1/h^2$, $A=1/h^2$.  To determine order accuracy let's ask if we also happen to get $0f'''(x)$, $Bh^3/6+C4h^3/3=0$, $B+8C=0$, clearly false, thus we get error of order $O(h^3/h^2)=O(h)$.
+Note that the Taylor estimation is $f(x+c)= f(x) + f'(x)c+ f''(x)c^2/2+f'''(x)c^3/6+O(c^4)$.  We are asked to find the values of the constants in the equation $f''(x)\approx Af(x)+Bf(x+h)+Cf(x+2h)$ that give the maximal accuracy in terms of the magnitude of $h$.  Note that using Taylor's approximation we get $f''(x)\approx Af(x)+B[f(x) + f'(x)h+ f''(x)h^2/2+f'''(x)h^3/6]+C[f(x) + 2f'(x)h+ 2f''(x)h^2+4f'''(x)h^3/3]+O(h^4)$.  We then get the equations $A+B+C=0$ to link values, $Bh+2Ch=0$, $Bh^2/2+2Ch^2=1$.  Solving we get $-B=2C$, $Bh^2/2-Bh^2=1$, $Bh^2(1/2-1)=-Bh^2/2=1$, $B=-2/h^2$, $C=1/h^2$, $A=1/h^2$.  To determine order accuracy let's ask if we also happen to get $0f'''(x)$, $Bh^3/6+C4h^3/3=0$, $B+8C=0$, clearly false, thus we get error of order $O(h^3/h^2)=O(h)$.
 \begin{exercise}
 2
 Turn in the last problem from the worksheet on Richardson extrapolation.
@@ -99,12 +99,12 @@ This is a plot of the $Ik(N)$ lines for $k=[0:3]$ notice that there slopes are $
 Problem 10.8. Note that Romberg integration is just Richardson extrapolation applied to the trapezoidal rule, as you did in the previous problem.
 \end{exercise}
 \lstinputlisting{../octave/d1.txt}
-The trapazodal rule will take arround $300,000$ steps to accheve the desired accuracy.  This is because the error in the trapazoid rule goes as $O(n^2)$ where as the Romberg integration is just Richardson extrapolation and increases the order of convergence as the number of steps increases.
+The trapezoidal rule will take around $300,000$ steps to achieve the desired accuracy.  This is because the error in the trapezoid rule goes as $O(n^2)$ where as the Romberg integration is just Richardson extrapolation and increases the order of convergence as the number of steps increases.
 \begin{exercise}
 4
 Problem 11.1 (a,b)
 \end{exercise}
-Solve analitically
+Solve analytically
 \begin{enumerate}[(a)]
 \item
 $$\frac{dy}{dt}=t^3$$
@@ -130,7 +130,7 @@ $$y=(y_0+b/a)e^{a t}-b/a$$
 5
 Problem 11.3
 \end{exercise}
-If $y=t^{3/2}$ then $y'=3/2t^{1/2}$.  Noting that $t^{1/2}=y^{1/3}$ we see $y'=3/2y^{1/3}$ and note that $(0,0)$ is a solution to $y=t^{3/2}$.  Clearly $y=t^{3/2}$ is a solution to the given ODE.  As a demonstration I will use one step of euler method on this problem.  Note that $y_1=0+0*h$ and $t_1=h$.  By inspection eular method will give us $y=0$ always.  Note that $y=0$ is actually a solution to the given ODE and initial conditions, this is the problem, there are multiple solutions to the ODE passing thrugh $(0,0)$.
+If $y=t^{3/2}$ then $y'=3/2t^{1/2}$.  Noting that $t^{1/2}=y^{1/3}$ we see $y'=3/2y^{1/3}$ and note that $(0,0)$ is a solution to $y=t^{3/2}$.  Clearly $y=t^{3/2}$ is a solution to the given ODE.  As a demonstration I will use one step of euler method on this problem.  Note that $y_1=0+0*h$ and $t_1=h$.  By inspection Euler method will give us $y=0$ always.  Note that $y=0$ is actually a solution to the given ODE and initial conditions, this is the problem, there are multiple solutions to the ODE passing through $(0,0)$.
 
 \begin{exercise}
 6
@@ -141,7 +141,7 @@ Problem 11.4
 7
 Problem 11.6
 \end{exercise}
-For $y'(y)=\lambda y$ we know that the slpoes needed for RK4 will be 
+For $y'(y)=\lambda y$ we know that the slopes needed for RK4 will be 
 $$s_1=y'(y_k)=\lambda y_k$$
 $$s_2=y'(y_k+s_1*h/2)=\lambda (y_k+\lambda y_k*h/2)=\lambda y_k+\lambda^2 y_k*h/2$$
 $$s_3=y'(y_k+s_2*h/2)=\lambda (y_k+(\lambda y_k+\lambda^2 y_k*h/2)*h/2)=\lambda y_k+\lambda^2 y_k*h/2+\lambda^3 y_k*(h/2)^2$$
@@ -169,7 +169,7 @@ w\\
 \frac{-y}{(x^2+y^2)^{2/3}}
 \end{bmatrix}$$
 \item
-This is my general orbit evaluator
+This is my general orbit evaluater
 \lstinputlisting{../octave/orbit.m}
 and here are euler and RK4
 \lstinputlisting{../octave/euler.m}
@@ -181,7 +181,7 @@ and the figures\\
 euler & RK4\\
 \includegraphics[scale=.15]{../octave/f2.jpg} & \includegraphics[scale=.3]{../octave/f3.jpg}
 \end{tabular}\\
-And here ar the requested runs notation is [w(0),h,tmax]\\
+And here are the requested runs notation is [w(0),h,tmax]\\
 \begin{tabular}{c c}
 $[0.5,0.25,50]$ & $[0.6,0.5,150]$\\
 \includegraphics[scale=.3]{../octave/f4.jpg} & \includegraphics[scale=.3]{../octave/f5.jpg}\\
